@@ -1,0 +1,29 @@
+" Highlight current line
+set cursorline
+
+let g:comment_leader = '// '
+
+augroup vimrc-python
+autocmd FileType python let g:comment_leader = '# '
+augroup END
+
+" Commenting blocks of code.
+" autocmd FileType c,go,php,scala   let b:comment_leader = '// '
+"autocmd FileType sh,ruby,python   let b:comment_leader = '# '
+"autocmd FileType vim              let b:comment_leader = '" '
+noremap <silent> <leader>mt :<C-B>silent <C-E>s/^/<C-R>=escape(g:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
+noremap <silent> <leader>mu :<C-B>silent <C-E>s/^\V<C-R>=escape(g:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+
+noremap <up> :echoerr 'dont use arrow key asshole, use k to up'<CR>
+noremap <down> :echoerr 'dont use arrow key asshole, use j to down'<CR>
+noremap <left> :echoerr 'dont use arrow key asshole, use h to left'<CR>
+noremap <right> :echoerr 'dont use arrow key asshole, use l to right'<CR>
+
+inoremap <up> <ESC>:echoerr 'use k to up'<CR>
+inoremap <down> <ESC>:echoerr 'use j to down'<CR>
+inoremap <left> <ESC>:echoerr 'use h to left'<CR>
+inoremap <right> <ESC>:echoerr 'use l to right'<CR>
+"inoremap <ESC> <Nop>
+
+"let g:UltiSnipsSnippetsDir = "~/.vim/UltiSnips"
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
