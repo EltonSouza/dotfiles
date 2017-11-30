@@ -1,2 +1,7 @@
 " Devicons
 Plug 'ryanoasis/vim-devicons'
+Plug 'matze/vim-move'
+Plug 'sebdah/vim-delve'
+
+" Auto Complete
+Plug 'Shougo/neocomplete.vim'
