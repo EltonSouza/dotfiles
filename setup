@@ -89,6 +89,15 @@ else
 fi
 printf "done\n"
 
+# installing tmux
+printf "\n\ninstalling tmux\n"
+if ! command_exists tmux; then
+	sudo dnf install tmux -y
+else
+	echo "tmux is already installed"
+fi
+printf "done\n"
+
 # installing htop 
 printf "\n\ninstalling htop\n"
 if ! command_exists htop; then
