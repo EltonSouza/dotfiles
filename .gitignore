@@ -1,9 +1,12 @@
 *
 !alias.zsh
 !.gitignore
+!.gitconfig
 !.config/terminator/
 !.config/terminator/config
-!setup
+!.config/Code/User/
+!install_go.sh
+!setup.sh
 !.tmux.conf
 !.tmux.conf.local
 !.vimrc
