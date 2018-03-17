@@ -52,7 +52,7 @@ ZSH_CUSTOM=~/.zsh_custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git sudo docker docker-compose virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -76,8 +76,10 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+export GOROOT=/usr/local/go
 export GOPATH=$HOME/gocode
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -95,3 +97,8 @@ prompt_context() {
     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
 }
+
+# Save a ton of history
+HISTSIZE=20000
+HISTFILE=~/.zsh_history
+SAVEHIST=20000

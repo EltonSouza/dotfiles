@@ -1,0 +1,11 @@
+{
+    "window.zoomLevel": 1,
+    "terminal.integrated.fontFamily": "Inconsolata for Powerline",
+    "terminal.integrated.fontSize": 16,
+    "files.autoSave": "onFocusChange",
+    "editor.minimap.enabled": false,
+    
+    "vim.hlsearch": true,
+
+    "editor.tabCompletion": true
+}

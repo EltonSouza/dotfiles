@@ -127,7 +127,7 @@ printf "done\n"
 
 # installing
 printf "\n\ninstalling some extra stuff\n"
-    sudo dnf -y install dnf-plugins-core util-linux-user
+    sudo dnf -y install dnf-plugins-core util-linux-user lm_sensors
 printf "done\n"
 
 # installing docker
@@ -174,6 +174,27 @@ if ! command_exists postgres; then
 else
     echo "postgres-server is already installed"
 fi
+printf "done\n"
+
+# installing exiftool
+printf "\n\ninstalling exiftool\n"
+if ! command_exists exiftool; then
+    sudo dnf install -y perl-Image-ExifTool
+else
+    echo "exiftool is already installed"
+fi
+printf "done\n"
+
+# installing vscode
+printf "\n\ninstalling vscode\n"
+if ! command_exists code; then
+    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+    sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+    sudo dnf install code
+else
+    echo "vscode is already installed"
+fi
+printf "done\n"
 
 # installing zsh
 printf "\n\ninstalling zsh and other bash stuff\n"
