@@ -4,4 +4,4 @@
 
 [core]
 	editor = vim
-    excludesfile = ~/.gitigore_global
+    	excludesfile = ~/.gitigore_global
