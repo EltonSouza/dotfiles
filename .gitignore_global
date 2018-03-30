@@ -1,0 +1,11 @@
+# VIM
+*.swp
+
+# envs/
+.envs/
+
+# Jetbrains
+.idea/
+
+# VSCode
+.vscode/

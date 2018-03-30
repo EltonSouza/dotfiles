@@ -2,6 +2,7 @@
 !alias.zsh
 !.gitignore
 !.gitconfig
+!.gitignore_global
 !.config/terminator/
 !.config/terminator/config
 !.config/Code/User/

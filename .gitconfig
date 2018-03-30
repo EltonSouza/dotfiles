@@ -1,5 +1,7 @@
 [user]
 	name = Elton Souza
 	email = elton.souza@gmail.com
+
 [core]
 	editor = vim
+    excludesfile = ~/.gitigore_global
