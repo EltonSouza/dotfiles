@@ -1,11 +1,28 @@
-{
-    "window.zoomLevel": 1,
-    "terminal.integrated.fontFamily": "Inconsolata for Powerline",
-    "terminal.integrated.fontSize": 16,
+{ 
+    "window.zoomLevel": 1, 
+    "terminal.integrated.fontFamily": "Inconsolata for Powerline", 
+    "terminal.integrated.fontSize": 16, 
     "files.autoSave": "onFocusChange",
     "editor.minimap.enabled": false,
     
     "vim.hlsearch": true,
 
-    "editor.tabCompletion": true
+    "editor.tabCompletion": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "window.openFoldersInNewWindow": "on",
+    "vim.handleKeys": {
+        "<C-f>": false,
+        "<C-d>": false,
+        "<C-x>": false,
+        "<C-c>": false,
+        "<A-S-Down>": false
+        
+    },
+    "editor.multiCursorModifier": "alt",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "window.newWindowDimensions": "maximized",
+    
+    "python.venvPath": "~/.virtualenvs",
 }
